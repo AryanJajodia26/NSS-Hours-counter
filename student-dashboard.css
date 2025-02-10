@@ -1,0 +1,109 @@
+:root {
+    --nss-red: #D32F2F;
+    --nss-blue: #1565C0;
+    --nss-white: #FFFFFF;
+    --background-gradient-start: #E8EAF6;
+    --background-gradient-end: #C5CAE9;
+    --card-background: rgba(255, 255, 255, 0.9);
+    --text-primary: #333333;
+    --text-secondary: #666666;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, var(--background-gradient-start), var(--background-gradient-end));
+    color: var(--text-primary);
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--nss-white);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    background: linear-gradient(90deg, var(--nss-red), var(--nss-blue));
+}
+
+.site-title {
+    font-size: 1.5rem;
+    color: var(--nss-white);
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+#datetime, .location {
+    color: var(--nss-white);
+}
+
+.profile-banner, .task-progress, .events-announcements {
+    background-color: var(--card-background);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: transform 0.3s ease;
+}
+
+.profile-banner:hover, .task-progress:hover, .events-announcements:hover {
+    transform: translateY(-5px);
+}
+
+.circular-progress {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    background: conic-gradient(from 0deg, var(--nss-red) 0%, var(--nss-red) 50%, var(--nss-blue) 50%, var(--nss-blue) 100%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.inner-circle {
+    width: 80%;
+    height: 80%;
+    background-color: var(--card-background);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-primary);
+}
+
+#submit-hours, #logout {
+    background: linear-gradient(45deg, var(--nss-red), var(--nss-blue));
+    color: var(--nss-white);
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+#submit-hours:hover, #logout:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+}
+
+.event-card {
+    background: linear-gradient(45deg, rgba(213, 47, 47, 0.1), rgba(21, 101, 192, 0.1));
+    border-radius: 10px;
+    padding: 1rem;
+    margin-right: 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-5px) rotate(2deg);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+}

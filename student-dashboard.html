@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NSS IIT Patna - Student Dashboard</title>
+    <link rel="stylesheet" href="student-dashboard.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+    <header>
+        <img src="nss-dashboard-logo.png" alt="NSS IIT Patna Logo" class="logo">
+        <h1 class="site-title">NSS IIT Patna</h1>
+        <div id="datetime"></div>
+        <div class="location">
+            <i class="fas fa-map-marker-alt"></i>
+            IIT Patna, Bihta, Bihar
+        </div>
+        <button id="logout">Logout</button>
+    </header>
+
+    <main>
+        <section class="profile-banner">
+            <div class="avatar-placeholder"></div>
+            <div class="student-info">
+                <h2>Aryan Jajodia</h2>
+                <p>Roll Number: 2301ME25</p>
+            </div>
+        </section>
+
+        <section class="dashboard-content">
+            <div class="progress-meter">
+                <div class="circular-progress">
+                    <div class="inner-circle">
+                        <span id="total-hours">0</span>/120 hours
+                    </div>
+                    <svg width="300" height="300">
+                        <circle class="bg" cx="150" cy="150" r="140"></circle>
+                        <circle class="progress sem1" cx="150" cy="150" r="140"></circle>
+                        <circle class="progress sem2" cx="150" cy="150" r="140"></circle>
+                        <line x1="150" y1="10" x2="150" y2="290" stroke="#fff" stroke-width="2"/>
+                        <text x="80" y="150" class="sem-label">Sem 2</text>
+                        <text x="220" y="150" class="sem-label">Sem 1</text>
+                    </svg>
+                </div>
+                <select id="hour-details">
+                    <option value="">Select to view hour details</option>
+                    <option value="sem1">Semester 1 Details</option>
+                    <option value="sem2">Semester 2 Details</option>
+                </select>
+            </div>
+            <div id="qrcode"></div>
+        </section>
+
+        <section class="task-progress">
+            <button id="submit-hours">Submit NSS Hours</button>
+            <ul class="task-list">
+                <li><i class="fas fa-check-circle"></i> Verified hours: <span id="verified-hours">0</span></li>
+                <li><i class="fas fa-clock"></i> Pending approvals: <span id="pending-hours">0</span></li>
+                <li><i class="fas fa-times-circle"></i> Rejected submissions: <span id="rejected-hours">0</span></li>
+            </ul>
+        </section>
+
+        <section class="events-announcements">
+            <h2>Upcoming Events</h2>
+            <div class="event-list">
+                <!-- Event cards will be dynamically added here -->
+            </div>
+        </section>
+    </main>
+
+    <script src="dashboard-script.js"></script>
+</body>
+</html>
