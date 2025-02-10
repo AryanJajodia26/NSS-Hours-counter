@@ -1,0 +1,165 @@
+:root {
+    --nss-red: #D32F2F;
+    --nss-blue: #1565C0;
+    --nss-white: #FFFFFF;
+    --dark-navy: #0A2342;
+    --gray: #F5F5F5;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--nss-white);
+    color: var(--dark-navy);
+}
+
+header {
+    background-color: var(--nss-white);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+}
+
+.logo {
+    height: 100px;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--dark-navy);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--nss-blue);
+}
+
+.cta-button {
+    background-color: var(--nss-red);
+    color: var(--nss-white);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #B71C1C;
+}
+
+#hero {
+    background: linear-gradient(135deg, var(--nss-red), var(--nss-blue));
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--nss-white);
+}
+
+.nss-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.motto {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.login-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.hero-cta {
+    background-color: var(--nss-white);
+    color: var(--nss-blue);
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hero-cta:hover {
+    background-color: var(--nss-blue);
+    color: var(--nss-white);
+}
+
+.subcord-login {
+    font-size: 1rem;
+    padding: 0.8rem 1.6rem;
+}
+
+section {
+    padding: 4rem 10%;
+}
+
+#about {
+    background-color: var(--gray);
+    text-align: center;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.icons i {
+    font-size: 3rem;
+    margin: 0 2rem;
+    color: var(--nss-blue);
+}
+
+#how-it-works {
+    background-color: var(--nss-white);
+}
+
+.steps {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.step {
+    text-align: center;
+    flex: 1;
+}
+
+.step i {
+    font-size: 3rem;
+    color: var(--nss-blue);
+    margin-bottom: 1rem;
+}
+
+footer {
+    background-color: var(--dark-navy);
+    color: var(--nss-white);
+    text-align: center;
+    padding: 1rem;
+}
