@@ -1,2 +1,2 @@
 # NSS-Hours-counter
-<br>Owner-Aryan Jajodia<\br>
+<br>Owner-Aryan Jajodia
